@@ -4,4 +4,4 @@
 
 ## Einordnung und Überblick 
 
-> Lissie wird im gleichnamigen Forschungs- und Entwicklungsprojekt am Lehrstuhl Entwicklung von Informationssystemen an der FernUniversität in Hagen unter der Leitung von Prof. Dr. Stefan Strecker konzipiert, entworfen, entwickelt, evaluiert und untersucht.
+> Lissie wird im gleichnamigen Forschungs- und Entwicklungsprojekt am Lehrstuhl Entwicklung von Informationssystemen an der FernUniversität in Hagen unter Leitung von Prof. Dr. Stefan Strecker konzipiert, entworfen, entwickelt, evaluiert und untersucht.
