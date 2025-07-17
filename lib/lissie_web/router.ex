@@ -54,6 +54,10 @@ defmodule LissieWeb.Router do
       on_mount: [{LissieWeb.UserAuth, :require_authenticated}] do
       live "/users/settings", UserLive.Settings, :edit
       live "/users/settings/confirm-email/:token", UserLive.Settings, :confirm_email
+      live "/students", StudentLive.Index, :index
+      live "/students/new", StudentLive.Form, :new
+      live "/students/:id", StudentLive.Show, :show
+      live "/students/:id/edit", StudentLive.Form, :edit
     end
 
     post "/users/update-password", UserSessionController, :update_password
