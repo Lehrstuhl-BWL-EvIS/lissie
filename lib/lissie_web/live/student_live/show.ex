@@ -1,6 +1,8 @@
 defmodule LissieWeb.StudentLive.Show do
   use LissieWeb, :live_view
 
+  # import Timex
+
   alias Lissie.Students
 
   @impl true
@@ -24,6 +26,7 @@ defmodule LissieWeb.StudentLive.Show do
         <:item title="Student">{@student.student_id}</:item>
         <:item title="Firstname">{@student.firstname}</:item>
         <:item title="Lastname">{@student.lastname}</:item>
+        <:item title="Date of Birth">{format_date(@student.dob)}</:item>
       </.list>
     </Layouts.app>
     """
@@ -36,4 +39,7 @@ defmodule LissieWeb.StudentLive.Show do
      |> assign(:page_title, "Show Student")
      |> assign(:student, Students.get_student!(id))}
   end
+
+  defp format_date(nil), do: "N/A"
+  defp format_date(date), do: Timex.format!(date, "{D}.{Mfull}.{YYYY}")
 end

@@ -22,8 +22,9 @@ defmodule LissieWeb.StudentLive.Index do
         row_click={fn {_id, student} -> JS.navigate(~p"/students/#{student}") end}
       >
         <:col :let={{_id, student}} label="Student">{student.student_id}</:col>
-        <:col :let={{_id, student}} label="Firstname">{student.firstname}</:col>
         <:col :let={{_id, student}} label="Lastname">{student.lastname}</:col>
+        <:col :let={{_id, student}} label="Firstname">{student.firstname}</:col>
+        <:col :let={{_id, student}} label="Date of Birth">{format_date(student.dob)}</:col>
         <:action :let={{_id, student}}>
           <div class="sr-only">
             <.link navigate={~p"/students/#{student}"}>Show</.link>
@@ -58,4 +59,7 @@ defmodule LissieWeb.StudentLive.Index do
 
     {:noreply, stream_delete(socket, :students, student)}
   end
+
+  defp format_date(nil), do: "N/A"
+  defp format_date(date), do: Timex.format!(date, "{D}.{M}.{YYYY}")
 end
