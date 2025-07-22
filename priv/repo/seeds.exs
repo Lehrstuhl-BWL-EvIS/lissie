@@ -23,8 +23,8 @@ alias Lissie.Students.Student
 
 if Mix.env() in [:dev] do
   # 1. Create or get user
-  user_email = "joe@example.com"
-  user_password = "password123"
+  user_email = "max@uni-beispiel.de"
+  user_password = "Password1234!"
 
   user =
     case Accounts.get_user_by_email(user_email) do
