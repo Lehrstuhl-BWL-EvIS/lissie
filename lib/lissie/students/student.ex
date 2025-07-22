@@ -18,8 +18,12 @@ defmodule Lissie.Students.Student do
   def changeset(student, attrs, user_scope) do
     student
     |> cast(attrs, [:student_id, :firstname, :lastname, :dob])
-    |> validate_required([:student_id, :firstname, :lastname, :dob])
+    |> validate_required([:student_id, :firstname, :lastname])
     |> unique_constraint(:student_id)
+    |> unique_constraint([:student_id, :firstname, :lastname])
+    |> validate_length(:student_id, min: 4, max: 100)
+    |> validate_length(:firstname, min: 2, max: 254)
+    |> validate_length(:lastname, min: 2, max: 254)
     |> put_change(:user_id, user_scope.user.id)
   end
 end
