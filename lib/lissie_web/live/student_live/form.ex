@@ -17,6 +17,7 @@ defmodule LissieWeb.StudentLive.Form do
         <.input field={@form[:student_id]} type="text" label="Student" />
         <.input field={@form[:firstname]} type="text" label="Firstname" />
         <.input field={@form[:lastname]} type="text" label="Lastname" />
+        <.input field={@form[:dob]} type="date" label="Date of Birth" />
         <footer>
           <.button phx-disable-with="Saving..." variant="primary">Save Student</.button>
           <.button navigate={return_path(@return_to, @student)}>Cancel</.button>

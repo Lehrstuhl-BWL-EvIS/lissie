@@ -8,6 +8,7 @@ defmodule Lissie.Students.Student do
     field :student_id, :string
     field :firstname, :string
     field :lastname, :string
+    field :dob, :date
 
     timestamps(type: :utc_datetime)
   end
@@ -15,7 +16,7 @@ defmodule Lissie.Students.Student do
   @doc false
   def changeset(student, attrs) do
     student
-    |> cast(attrs, [:student_id, :firstname, :lastname])
+    |> cast(attrs, [:student_id, :firstname, :lastname, :dob])
     |> validate_required([:student_id, :firstname, :lastname])
     |> unique_constraint(:student_id)
     |> unique_constraint([:student_id, :firstname, :lastname])
