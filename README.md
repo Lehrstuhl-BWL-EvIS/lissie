@@ -1,4 +1,4 @@
-# Lissie - Ein web-basiertes Prüfungsverwaltungs- und Lehrstuhlinformationssystem 
+# Lissie - Ein web-basiertes Lehrstuhlinformationssystem 
 
 > Lissie vereinfacht die Planung, Betreuung, Durchführung und Administration von Seminaren, Haus- und Abschlussarbeiten und anderen Lehrveranstaltungs- und Prüfungsformen an Hochschulen.
 
