@@ -18,8 +18,9 @@
 
 > Hinweis: Der Begriff "Lehrstuhlinformationssystem" und der Begriff "Fakultätsinformationssysteme" ist (bislang) in der Fachsprache der Wirtschaftsinformatik nicht differenziert behandelt und kaum konturiert. Sogenannte Campusmanagementsysteme weisen u.U. gewisse Überschneidungen auf. Wir gehen von der Vorstellung aus, dass es sich in einer ersten Näherung um ein typisches Informationssystem zur Verwaltung und Auswertung von Daten handelt, die während der Aufgabendurchführung der genannten Aufgaben benötigt werden. 
 
+
 ## Ziel: Entwicklung und Erforschung eines Lehrstuhl- und Fakultätsinformationssystems als Web-Applikation mit Elixir, Phoenix & PostgreSQL
 
 > Für diese ausgewählten administrativen Aufgaben soll ein Lehrstuhl- und Fakultätsinformationssystem entworfen und als Web-Applikation mit der Programmiersprache [Elixir](https://elixir-lang.org), dem Web-Framework [Phoenix](https://phoenixframework.org) und dem RDBMS [PostgreSQL](https://postgresql.org) implementiert werden.
-> Dabei soll auf bereits vorliegenden Vorarbeiten aufgebaut werden (u.a. sind Teile des Datenbankschemas bereits entworfen und Teile davon bereits als Web-App implementiert). 
+> Dabei soll auf bereits vorliegenden Vorarbeiten aufgebaut werden (u.a. sind Teile des Datenbankschemas bereits entworfen und Teile davon bereits als Web-App implementiert).
 
