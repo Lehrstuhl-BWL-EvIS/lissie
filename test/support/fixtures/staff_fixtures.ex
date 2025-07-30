@@ -18,4 +18,37 @@ defmodule Lissie.StaffFixtures do
 
     advisor
   end
+
+  @doc """
+  Generate a supervisor.
+  """
+  def supervisor_fixture(attrs \\ %{}) do
+    {:ok, supervisor} =
+      attrs
+      |> Enum.into(%{
+        firstname: "some firstname",
+        lastname: "some lastname",
+        salutation: "some salutation"
+      })
+      |> Lissie.Staff.create_supervisor()
+
+    supervisor
+  end
+
+  @doc """
+  Generate a supervisor.
+  """
+  def supervisor_fixture(attrs \\ %{}) do
+    {:ok, supervisor} =
+      attrs
+      |> Enum.into(%{
+        email: "some email",
+        firstname: "some firstname",
+        lastname: "some lastname",
+        salutation: "some salutation"
+      })
+      |> Lissie.Staff.create_supervisor()
+
+    supervisor
+  end
 end

@@ -64,6 +64,11 @@ defmodule LissieWeb.Router do
       live "/advisors/new", AdvisorLive.Form, :new
       live "/advisors/:id", AdvisorLive.Show, :show
       live "/advisors/:id/edit", AdvisorLive.Form, :edit
+
+      live "/supervisors", SupervisorLive.Index, :index
+      live "/supervisors/new", SupervisorLive.Form, :new
+      live "/supervisors/:id", SupervisorLive.Show, :show
+      live "/supervisors/:id/edit", SupervisorLive.Form, :edit
     end
 
     post "/users/update-password", UserSessionController, :update_password

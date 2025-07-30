@@ -58,4 +58,122 @@ defmodule Lissie.StaffTest do
       assert %Ecto.Changeset{} = Staff.change_advisor(advisor)
     end
   end
+
+  describe "supervisors" do
+    alias Lissie.Staff.Supervisor
+
+    import Lissie.StaffFixtures
+
+    @invalid_attrs %{salutation: nil, firstname: nil, lastname: nil}
+
+    test "list_supervisors/0 returns all supervisors" do
+      supervisor = supervisor_fixture()
+      assert Staff.list_supervisors() == [supervisor]
+    end
+
+    test "get_supervisor!/1 returns the supervisor with given id" do
+      supervisor = supervisor_fixture()
+      assert Staff.get_supervisor!(supervisor.id) == supervisor
+    end
+
+    test "create_supervisor/1 with valid data creates a supervisor" do
+      valid_attrs = %{salutation: "some salutation", firstname: "some firstname", lastname: "some lastname"}
+
+      assert {:ok, %Supervisor{} = supervisor} = Staff.create_supervisor(valid_attrs)
+      assert supervisor.salutation == "some salutation"
+      assert supervisor.firstname == "some firstname"
+      assert supervisor.lastname == "some lastname"
+    end
+
+    test "create_supervisor/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Staff.create_supervisor(@invalid_attrs)
+    end
+
+    test "update_supervisor/2 with valid data updates the supervisor" do
+      supervisor = supervisor_fixture()
+      update_attrs = %{salutation: "some updated salutation", firstname: "some updated firstname", lastname: "some updated lastname"}
+
+      assert {:ok, %Supervisor{} = supervisor} = Staff.update_supervisor(supervisor, update_attrs)
+      assert supervisor.salutation == "some updated salutation"
+      assert supervisor.firstname == "some updated firstname"
+      assert supervisor.lastname == "some updated lastname"
+    end
+
+    test "update_supervisor/2 with invalid data returns error changeset" do
+      supervisor = supervisor_fixture()
+      assert {:error, %Ecto.Changeset{}} = Staff.update_supervisor(supervisor, @invalid_attrs)
+      assert supervisor == Staff.get_supervisor!(supervisor.id)
+    end
+
+    test "delete_supervisor/1 deletes the supervisor" do
+      supervisor = supervisor_fixture()
+      assert {:ok, %Supervisor{}} = Staff.delete_supervisor(supervisor)
+      assert_raise Ecto.NoResultsError, fn -> Staff.get_supervisor!(supervisor.id) end
+    end
+
+    test "change_supervisor/1 returns a supervisor changeset" do
+      supervisor = supervisor_fixture()
+      assert %Ecto.Changeset{} = Staff.change_supervisor(supervisor)
+    end
+  end
+
+  describe "supervisors" do
+    alias Lissie.Staff.Supervisor
+
+    import Lissie.StaffFixtures
+
+    @invalid_attrs %{email: nil, salutation: nil, firstname: nil, lastname: nil}
+
+    test "list_supervisors/0 returns all supervisors" do
+      supervisor = supervisor_fixture()
+      assert Staff.list_supervisors() == [supervisor]
+    end
+
+    test "get_supervisor!/1 returns the supervisor with given id" do
+      supervisor = supervisor_fixture()
+      assert Staff.get_supervisor!(supervisor.id) == supervisor
+    end
+
+    test "create_supervisor/1 with valid data creates a supervisor" do
+      valid_attrs = %{email: "some email", salutation: "some salutation", firstname: "some firstname", lastname: "some lastname"}
+
+      assert {:ok, %Supervisor{} = supervisor} = Staff.create_supervisor(valid_attrs)
+      assert supervisor.email == "some email"
+      assert supervisor.salutation == "some salutation"
+      assert supervisor.firstname == "some firstname"
+      assert supervisor.lastname == "some lastname"
+    end
+
+    test "create_supervisor/1 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = Staff.create_supervisor(@invalid_attrs)
+    end
+
+    test "update_supervisor/2 with valid data updates the supervisor" do
+      supervisor = supervisor_fixture()
+      update_attrs = %{email: "some updated email", salutation: "some updated salutation", firstname: "some updated firstname", lastname: "some updated lastname"}
+
+      assert {:ok, %Supervisor{} = supervisor} = Staff.update_supervisor(supervisor, update_attrs)
+      assert supervisor.email == "some updated email"
+      assert supervisor.salutation == "some updated salutation"
+      assert supervisor.firstname == "some updated firstname"
+      assert supervisor.lastname == "some updated lastname"
+    end
+
+    test "update_supervisor/2 with invalid data returns error changeset" do
+      supervisor = supervisor_fixture()
+      assert {:error, %Ecto.Changeset{}} = Staff.update_supervisor(supervisor, @invalid_attrs)
+      assert supervisor == Staff.get_supervisor!(supervisor.id)
+    end
+
+    test "delete_supervisor/1 deletes the supervisor" do
+      supervisor = supervisor_fixture()
+      assert {:ok, %Supervisor{}} = Staff.delete_supervisor(supervisor)
+      assert_raise Ecto.NoResultsError, fn -> Staff.get_supervisor!(supervisor.id) end
+    end
+
+    test "change_supervisor/1 returns a supervisor changeset" do
+      supervisor = supervisor_fixture()
+      assert %Ecto.Changeset{} = Staff.change_supervisor(supervisor)
+    end
+  end
 end
