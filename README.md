@@ -24,3 +24,20 @@
 > Für diese ausgewählten administrativen Aufgaben soll ein Lehrstuhl- und Fakultätsinformationssystem entworfen und als Web-Applikation mit der Programmiersprache [Elixir](https://elixir-lang.org), dem Web-Framework [Phoenix](https://phoenixframework.org) und dem RDBMS [PostgreSQL](https://postgresql.org) implementiert werden.
 > Dabei soll auf bereits vorliegenden Vorarbeiten aufgebaut werden (u.a. sind Teile des Datenbankschemas bereits entworfen und Teile davon bereits als Web-App implementiert).
 
+## Domänenanalyse : Zentrale Konzepte
+
+> [!NOTE]
+> Richtlinie: alle Bezeichner im Quellcode in englischer Sprache (Vorsicht: subtile sprachliche Unterschiede)
+
+> [!IMPORTANT]
+> Student (Synonym: zu prüfende Person, Prüfling) - engl. Bezeichner: student / students
+> Attribute: student_id, email, salutation, firstname, lastname
+
+> [!IMPORTANT]
+> Betreuer (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: advisor / advisors
+> Attribute: email, salutation, firstname, lastname
+
+> [!IMPORTANT]
+> Gutachter (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: supervisor / supervisors
+> Attribute: email, salutation, firstname, lastname
+
