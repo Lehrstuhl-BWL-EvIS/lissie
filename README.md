@@ -31,13 +31,16 @@
 
 > [!IMPORTANT]
 > Student (Synonym: zu prüfende Person, Prüfling) - engl. Bezeichner: student / students
+> 
 > Attribute: student_id, email, salutation, firstname, lastname
 
 > [!IMPORTANT]
 > Betreuer (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: advisor / advisors
+> 
 > Attribute: email, salutation, firstname, lastname
 
 > [!IMPORTANT]
 > Gutachter (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: supervisor / supervisors
+> 
 > Attribute: email, salutation, firstname, lastname
 
