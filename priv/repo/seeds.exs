@@ -50,7 +50,7 @@ if Mix.env() in [:dev] do
   if student do
     IO.puts("ℹ️ Student already exists: #{student_id}")
   else
-    {:ok, student} =
+    {:ok, _student} =
       Students.create_student(%{
         student_id: student_id,
         firstname: firstname,
