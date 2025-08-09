@@ -7,7 +7,7 @@ defmodule LissieWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_lissie_key",
-    signing_salt: "oc1nKwrr",
+    signing_salt: "qTivLC3S",
     same_site: "Lax"
   ]
 

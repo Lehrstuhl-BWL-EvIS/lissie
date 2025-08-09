@@ -23,7 +23,7 @@ config :lissie, LissieWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "vfRIYhWSwwizWL9KFyJS7nJZ/7kqoY/MO598Icd9NbsclyN6A+0ekWNBf4jGshP0",
+  secret_key_base: "0FrMB7wz1sU3ha1JyYk2GMtPb3wsmTGD1LHiv451UwYj6Gy3Ia/QO3DX1FhqwPv/",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:lissie, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:lissie, ~w(--watch)]}
@@ -80,7 +80,7 @@ config :phoenix_live_view,
   # Include debug annotations and locations in rendered markup.
   # Changing this configuration will require mix clean and a full recompile.
   debug_heex_annotations: true,
-  debug_tags_location: true,
+  debug_attributes: true,
   # Enable helpful, but potentially expensive runtime checks
   enable_expensive_runtime_checks: true
 

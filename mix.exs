@@ -5,7 +5,7 @@ defmodule Lissie.MixProject do
     [
       app: :lissie,
       version: "0.1.0",
-      elixir: "~> 1.18",
+      elixir: "~> 1.15",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -25,6 +25,12 @@ defmodule Lissie.MixProject do
     ]
   end
 
+  def cli do
+    [
+      preferred_envs: [precommit: :test]
+    ]
+  end
+
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
@@ -34,8 +40,8 @@ defmodule Lissie.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:argon2_elixir, "~> 4.0"},
-      {:phoenix, "~> 1.8.0", override: true},
+      {:usage_rules, "~> 0.1", only: [:dev]},
+      {:phoenix, "~> 1.8.0"},
       {:phoenix_ecto, "~> 4.5"},
       {:ecto_sql, "~> 3.13"},
       {:postgrex, ">= 0.0.0"},
@@ -61,7 +67,8 @@ defmodule Lissie.MixProject do
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.2.0"},
       {:bandit, "~> 1.5"},
-      {:timex, "~> 3.7"}
+      {:igniter, "~> 0.6", only: [:dev, :test]},
+      {:tidewave, "~> 0.2", only: :dev}
     ]
   end
 
@@ -83,7 +90,8 @@ defmodule Lissie.MixProject do
         "tailwind lissie --minify",
         "esbuild lissie --minify",
         "phx.digest"
-      ]
+      ],
+      precommit: ["compile --warning-as-errors", "deps.unlock --unused", "format", "test"]
     ]
   end
 end

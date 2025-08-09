@@ -1,46 +1,18 @@
-# Lissie - Ein web-basiertes Lehrstuhl- und Fakultätsinformationssystem 
+# Lissie
 
-> Lissie vereinfacht die Planung, Betreuung, Durchführung und Administration von Seminaren, Haus- und Abschlussarbeiten und anderen Lehrveranstaltungs- und Prüfungsformen an Hochschulen.
+To start your Phoenix server:
 
-## Einordnung und Überblick 
+* Run `mix setup` to install and setup dependencies
+* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-> Lissie wird im [gleichnamigen Forschungs- und Entwicklungsprojekt](https://www.fernuni-hagen.de/evis/research/projects/LISSIE.shtml) am [Lehrstuhl Entwicklung von Informationssystemen](https://www.fernuni-hagen.de/evis/) an der [FernUniversität in Hagen](https://www.fernuni-hagen.de) unter der Leitung von [Prof. Dr. Stefan Strecker](https://www.fernuni-hagen.de/evis/team/stefan.strecker.shtml) konzipiert, entworfen, entwickelt, evaluiert und untersucht.
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-## Was ist ein Lehrstuhl- und Fakultätsinformationssystem?
+## Learn more
 
-> Ein Lehrstuhlinformationssystem unterstützt bei der Durchführung administrativer und dispositiver Aufgaben an einem Lehrstuhl einer Fakultät an einer Universität.
-> Die administrativen Aufgaben an einem Lehrstuhl sind vielfältig und umfassen grob die Aufgabenfelder Forschung, Lehre und universitäre Selbstverwaltung.
-> Im Bereich der Lehre zählen zu diesen Aufgaben die Planung, Organisation und Durchführung von Klausuren und Seminaren sowie die Planung, Organisation und Betreuung von Abschlussarbeiten (Bachelorarbeit, Masterarbeit).
-> Ein Fakultätsinformationssystem unterstützt bei der Durchführung administrativer und dispositiver Aufgaben auf Ebene der Fakultät.
-> Diese Aufgaben sind ebenso vielfältig und umfassen grob in erster Linie die Aufgabenfelder Lehre und universitäre Selbstverwaltung durch die Akteure im Zentralbereich der Fakultät (u.a. Prüfungsamt, Dekanat).
-
-
-> Hinweis: Der Begriff "Lehrstuhlinformationssystem" und der Begriff "Fakultätsinformationssysteme" ist (bislang) in der Fachsprache der Wirtschaftsinformatik nicht differenziert behandelt und kaum konturiert. Sogenannte Campusmanagementsysteme weisen u.U. gewisse Überschneidungen auf. Wir gehen von der Vorstellung aus, dass es sich in einer ersten Näherung um ein typisches Informationssystem zur Verwaltung und Auswertung von Daten handelt, die während der Aufgabendurchführung der genannten Aufgaben benötigt werden. 
-
-
-## Ziel: Entwicklung und Erforschung eines Lehrstuhl- und Fakultätsinformationssystems als Web-Applikation mit Elixir, Phoenix & PostgreSQL
-
-> Für diese ausgewählten administrativen Aufgaben soll ein Lehrstuhl- und Fakultätsinformationssystem entworfen und als Web-Applikation mit der Programmiersprache [Elixir](https://elixir-lang.org), dem Web-Framework [Phoenix](https://phoenixframework.org) und dem RDBMS [PostgreSQL](https://postgresql.org) implementiert werden.
-> Dabei soll auf bereits vorliegenden Vorarbeiten aufgebaut werden (u.a. sind Teile des Datenbankschemas bereits entworfen und Teile davon bereits als Web-App implementiert).
-
-## Domänenanalyse : Zentrale Konzepte
-
-> [!NOTE]
-> Richtlinie: alle Bezeichner im Quellcode in englischer Sprache (Vorsicht: subtile sprachliche Unterschiede)
-
-> [!IMPORTANT]
-> Student (Synonym: zu prüfende Person, Prüfling) - engl. Bezeichner: student / students
-> 
-> Attribute: student_id, email, salutation, firstname, lastname
-
-> [!IMPORTANT]
-> Betreuer (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: advisor / advisors
-> 
-> Attribute: email, salutation, firstname, lastname
-
-> [!IMPORTANT]
-> Gutachter (einer Hausarbeit, Seminararbeit, Abschlussarbeit) - engl. Bezeichner: supervisor / supervisors
-> 
-> Attribute: email, salutation, firstname, lastname
-
+* Official website: https://www.phoenixframework.org/
+* Guides: https://hexdocs.pm/phoenix/overview.html
+* Docs: https://hexdocs.pm/phoenix
+* Forum: https://elixirforum.com/c/phoenix-forum
+* Source: https://github.com/phoenixframework/phoenix
