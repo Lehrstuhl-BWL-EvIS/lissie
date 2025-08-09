@@ -78,14 +78,14 @@ defmodule Lissie.StaffTest do
 
     test "create_supervisor/1 with valid data creates a supervisor" do
       valid_attrs = %{
-        email: "some email",
+        email: "email@email.com",
         salutation: "some salutation",
         firstname: "some firstname",
         lastname: "some lastname"
       }
 
       assert {:ok, %Supervisor{} = supervisor} = Staff.create_supervisor(valid_attrs)
-      assert supervisor.email == "some email"
+      assert supervisor.email == "email@email.com"
       assert supervisor.salutation == "some salutation"
       assert supervisor.firstname == "some firstname"
       assert supervisor.lastname == "some lastname"
@@ -99,14 +99,14 @@ defmodule Lissie.StaffTest do
       supervisor = supervisor_fixture()
 
       update_attrs = %{
-        email: "some updated email",
+        email: "email@email.com",
         salutation: "some updated salutation",
         firstname: "some updated firstname",
         lastname: "some updated lastname"
       }
 
       assert {:ok, %Supervisor{} = supervisor} = Staff.update_supervisor(supervisor, update_attrs)
-      assert supervisor.email == "some updated email"
+      assert supervisor.email == "email@email.com"
       assert supervisor.salutation == "some updated salutation"
       assert supervisor.firstname == "some updated firstname"
       assert supervisor.lastname == "some updated lastname"
